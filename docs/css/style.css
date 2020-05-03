@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.root {
+    height: 100vh;
+}
+
+.graph-control {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
