@@ -1,0 +1,13 @@
+{:lein   {:profile "+cljs"}
+ :nrepl  {:port 3333}
+ :http   {:port 3000}
+
+ :builds {:app {:target     :browser
+                :output-dir "public/js/dist"
+                :asset-path "/js/dist"
+                :modules    {:main
+                             {:entries [datascript-graphs.core]}}
+                :devtools   {:after-load datascript-graphs.core/on-update
+                             :http-root  "public"
+                             :http-port  3001
+                             :preloads   [devtools.preload]}}}}
